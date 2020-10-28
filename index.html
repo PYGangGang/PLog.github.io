@@ -48,7 +48,7 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work">Work</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#activities-roles">Activities & Roles</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                 </ul>
             </div>
@@ -99,23 +99,33 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Back-End Software Engineer</h3>
                             <div class="subheading mb-3">Online search team @Search architecture department @Baidu</div>
-                            <p>Briefly talk about what our team is doing right now.</p>
-                            <strong>Model Service</strong>
+                            <p>搜索架构部负责维护百度搜索离线网页库创建、网页索引库更新和在线实时检索端服务，我所在的团队负责整个后端在线架构，通过高效的架构来保证搜索服务的低延时和稳定性。在职期间，我主要参与了后端智能化架构的建设和维护，</p>
+                            <strong>Model Service在线异构资源(CPU, GPU, XPU)计算架构</strong>
                             <ul class="mb-0">
                                 <li>
-                                    do something
+                                    【自动降级】根据后端模型预测服务的响应时长，基于主动的心跳探活实现的自动化降级功能
+                                    <ul class="mb-0">
+                                        <li>改造现有的brpc，在模型服务的proxy和agent的连接中引入主动的心跳探活和全局超时计数，实现自动根据后端负载情况主动降级的功能</li>
+                                        <li>引入多线程计数机制bvar，在对后端agent的异步调度过程中，实现对全局重试次数的统计，根据预设的重试比例选择性的拒绝重试请求，以将后端的压力控制在允许的buffer范围内</li>
+                                        <li>引入全局调度机制，将rpc引起的重查和业务方模块主动发起的重查进行区分，根据上下游传递的信号实现灵活的柔性降级机制</li>
+                                        <li>设计对外提供访问后端的统一接口，封装两种新旧两种rpc访问agent的方式，实现上游模块通过开关控制访问通路，隐藏实现细节</li>
+                                    </ul>
                                 </li>
                                 <li>
-                                    do something
+                                    【多维度日志监控】以模型服务的不同日志项为维度进行展开，对接入服务的不同模型、不同资源类型、不同机房的关键指标进行可视化的数据展示与异常预警
+                                    <ul class="mb-0">
+                                        <li>在模型服务模块中接入公司内部的流式日志处理工具logstream，将在实时日志中匹配到的目标项在mongodb中进行流式聚合</li>
+                                        <li>将在线数据库中的数据进行二次聚合，划分维度后接入内部展示平台，实现多维数据的实时展示和对比分析</li>
+                                    </ul>
                                 </li>
                             </ul>
-                            <strong>Nearline</strong>
+                            <strong>Model Nearline Compute</strong>
                             <ul class="mb-0">
                                 <li>
                                     do something
                                 </li>   
                                 <li>
-                                    do something 
+                                    do something
                                 </li>
                             </ul>
                         </div>
@@ -133,13 +143,11 @@
                             <h3 class="mb-0">GPU-based Parallel Encryption Algorithm</h3>
                             <div class="subheading mb-3">Undergraduate graduation project @Beihang Univeristy</div>
                             <p>Briefly talk about what our team is doing right now.</p>
-                            <ul class="fa-ul mb-0">
+                            <ul class="mb-0">
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                             </ul>
@@ -152,13 +160,11 @@
                             <div class="subheading mb-3">Research Intern @<a href="https://ruiliurobotics.weebly.com">Cognitive Robotics and AI Lab</a>, Kent State University</div>
                             <p>Briefly talk about what our team is doing right now.</p>
 
-                            <ul class="fa-ul mb-0">
+                            <ul class="mb-0">
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                             </ul>
@@ -170,13 +176,11 @@
                             <h3 class="mb-0">Human-to-Robot Attention Transfer for Robot Execution Failure Avoidance Using Stacked Neural Networks</h3>
                             <div class="subheading mb-3">Research Intern @Cognitive Robotics and AI Lab, Kent State University</div>
                             <p>Briefly talk about what our team is doing right now.</p>
-                            <ul class="fa-ul mb-0">
+                            <ul class="mb-0">
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                                 <li>
-                                    <span class="fa-li"></span>
                                     do something
                                 </li>
                             </ul>    
@@ -231,10 +235,10 @@
                 </div>
             </section>
             <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section" id="interests">
+            <!-- Activities & Roles-->
+            <section class="resume-section" id="activities-roles">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Interests</h2>
+                    <h2 class="mb-5">Activities & Role</h2>
                     <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
                     <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
                 </div>
