@@ -140,10 +140,17 @@
                     <h2 class="mb-5">Research Experience</h2>
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
-                            <h3 class="mb-0">GPU-based Parallel Encryption Algorithm</h3>
-                            <div class="subheading mb-3">Undergraduate graduation project @Beihang Univeristy</div>
+                            <div class="d-flex flex-md-row justify-content-between mb-0">
+                                <div class="flex-grow-1">
+                                    <h3 class="mb-0">GPU-based Parallel Encryption Algorithm</h3>
+                                    <div class="subheading mb-3">Undergraduate graduation project @Beihang Univeristy</div>
+                                </div>
+                                <div class="flex-shrink-0 mr-5">
+                                    <a href="https://drive.google.com/file/d/1qtcB7WVrntroN4PmskA6MrNCL1vKKAEZ/view?usp=sharing" class="btn btn-primary btn-sm" role="button">view the paper<br>(Chinese version)</a>
+                                </div>
+                            </div>
                             <p>Based on AES (Advanced Encryption Standard) and SM4 (Commercial Cryptography Standard), I designed two novel parallel encryption algorithms and implemented them on the Nvidia GPU with special design of data transmission optimization</p>
-                            <ul class="mb-0">
+                            <ul class="mb-3">
                                 <li>
                                     Designed two parallel encryption algorithms based on Electronic Codebook (ECB) mode, and implemented them on Nvidia GTX 965M GPU. 
                                 </li>
@@ -151,10 +158,20 @@
                                     Designed experiments to verify the advantages of the parallel encryption algorithms in terms of running time, speedup and throughput compared with the baseline strategy (serial encryption algorithm), and got great improvement shown as below
                                 </li>
                             </ul>
-                        </div>
-                        <div class="flex-grow-1 mr-5">
-                            <!-- <iframe src="https://docs.google.com/document/d/e/2PACX-1vTv2PFEuRHAksLuXABUZ7cTtozaoTV4ybhr1sh3a9kUW3TCHCX8CcCMl-UPGGuwvQ/pub?embedded=true"></iframe> -->
-                            
+                            <div class="d-flex flex-md-row justify-content-between">
+                                <div class="m-2">
+                                    <figure class="figure">
+                                        <img src="assets/img/speedup_aes.jpg" class="figure-img img-fluid rounded" alt="execution time comparison between parallel and serial AES algorithms">
+                                        <figcaption class="figure-caption">execution time comparison between parallel and serial AES algorithms</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="m-2">
+                                    <figure class="figure">
+                                        <img src="assets/img/speedup_sm4.jpg" class="figure-img img-fluid rounded" alt="execution time comparison between parallel and serial SM4 algorithms">
+                                        <figcaption class="figure-caption">execution time comparison between parallel and serial SM4 algorithms</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">January 2020 - June 2020</span></div>
                     </div>
