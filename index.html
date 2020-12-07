@@ -98,34 +98,18 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Back-End Software Engineer</h3>
-                            <div class="subheading mb-3">Online search team @Search architecture department @Baidu</div>
-                            <p>搜索架构部负责维护百度搜索离线网页库创建、网页索引库更新和在线实时检索端服务，我所在的团队负责整个后端在线架构，通过高效的架构来保证搜索服务的低延时和稳定性。在职期间，我主要参与了后端智能化架构的建设和维护，</p>
-                            <strong>Model Service在线异构资源(CPU, GPU, XPU)计算架构</strong>
+                            <div class="subheading mb-3">Online Search team @Search Architecture Department @Baidu</div>
+                            <p>Search Architecture Department is responsible for maintaining Baidu search offline web page library, web index library and online real-time search service. My team is in charge of the entire back-end architecture. I mainly participated in the build of back-end intelligent architecture. We developed and maintained an online model inference framework. Through the mixed deployment of models, one instance can respond to multiple inference requests, which greatly improved the utilization rate of computing resources; through platform-based design, the deployment details were shielded from access services, so that only simple RPC requests are required to obtain highly stable model inference services with success rate of 99.9%.</p>
+                            <h5 class="mb-3">Model Service: online heterogeneous computing resource (CPU, GPU, XPU) inference server</h4>
                             <ul class="mb-0">
                                 <li>
-                                    【自动降级】根据后端模型预测服务的响应时长，基于主动的心跳探活实现的自动化降级功能
-                                    <ul class="mb-0">
-                                        <li>改造现有的brpc，在模型服务的proxy和agent的连接中引入主动的心跳探活和全局超时计数，实现自动根据后端负载情况主动降级的功能</li>
-                                        <li>引入多线程计数机制bvar，在对后端agent的异步调度过程中，实现对全局重试次数的统计，根据预设的重试比例选择性的拒绝重试请求，以将后端的压力控制在允许的buffer范围内</li>
-                                        <li>引入全局调度机制，将rpc引起的重查和业务方模块主动发起的重查进行区分，根据上下游传递的信号实现灵活的柔性降级机制</li>
-                                        <li>设计对外提供访问后端的统一接口，封装两种新旧两种rpc访问agent的方式，实现上游模块通过开关控制访问通路，隐藏实现细节</li>
-                                    </ul>
+                                    <strong>[Automatic Degradation]</strong> Implemented an active heartbeat detection based on multi-thread counting technology, which generated the degradation parameters according to the response time and sent it back to the upstream application to realize an automatic delay-based degradation mechanism
                                 </li>
                                 <li>
-                                    【多维度日志监控】以模型服务的不同日志项为维度进行展开，对接入服务的不同模型、不同资源类型、不同机房的关键指标进行可视化的数据展示与异常预警
-                                    <ul class="mb-0">
-                                        <li>在模型服务模块中接入公司内部的流式日志处理工具logstream，将在实时日志中匹配到的目标项在mongodb中进行流式聚合</li>
-                                        <li>将在线数据库中的数据进行二次聚合，划分维度后接入内部展示平台，实现多维数据的实时展示和对比分析</li>
-                                    </ul>
+                                    <strong>[Multi-dimensional Log Monitoring]</strong> Transmitted real-time logs into MongoDB for streaming aggregation, and expand the data in dimensions of a specific monitoring metric, visualizing the expanded data with internal tools to realize functions as multi-dimensional abnormal traffic alert and inference success rate monitoring
                                 </li>
-                            </ul>
-                            <strong>Model Nearline Compute</strong>
-                            <ul class="mb-0">
                                 <li>
-                                    do something
-                                </li>   
-                                <li>
-                                    do something
+                                    <strong>[Model Optimization & Access Support]</strong> Optimized Transformer based models (Bert, Ernie) according to hardware types (Tesla T4, Tesla P4, Kunlun K200) using TensorRT and got 50% speedup in average; supported different types of models to access Model Service; provided daily technology support and abnormality response
                                 </li>
                             </ul>
                         </div>
