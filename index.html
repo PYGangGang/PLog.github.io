@@ -99,6 +99,15 @@
                             <h3 class="mb-0">Software Development Engineer</h3>
                             <div class="subheading mb-3">JP Prime & Customer Engagement team @Intech @Amazon</div>
                             <p>Our team has two scopes. The first is JP prime, in which we cooperates with bussiness and PM teams to develop Amazon prime service for Japan localized needs. The other is customer engagement. We build a platform to power personalized customer engagement experience. We recommend personalized actions for customers and track their behavior to reward them for deeper engagement. I participated in both parts, developing and maintaining new features and doing tech designs in serverless fashion.</p>
+                            <h5 class="mb-3">Customer Engagement Platform</h4>
+                            <ul class="mb-0">
+                                <li>
+                                    <strong>[Do X, get Y Project]</strong> Developed and launched a new customer engagement project, including landing page implementation on Amazon main site, management web service for project managers to manage offers, customer action tracking system (serverless), contract fulfillment and rewarding workflow, and a aggregator service exposing APIs for operation
+                                </li>
+                                <li>
+                                    <strong>[AWS migration]</strong> Designed and developed a serverless based data processing stream to ingest all kinds of customer action, as a part of migration from server-based services to native AWS
+                                </li>
+                            </ul>
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">September 2021 - Present</span></div>
                     </div>
@@ -110,10 +119,7 @@
                             <h5 class="mb-3">Model Service: online heterogeneous computing resource (CPU, GPU, XPU) inference server</h4>
                             <ul class="mb-0">
                                 <li>
-                                    <strong>[Automatic Degradation]</strong> Implemented an active heartbeat detection based on multi-thread counting technology, which generated the degradation parameters according to the response time and sent it back to the upstream application to realize an automatic delay-based degradation mechanism
-                                </li>
-                                <li>
-                                    <strong>[Multi-dimensional Log Monitoring]</strong> Transmitted real-time logs into MongoDB for streaming aggregation, and expand the data in dimensions of a specific monitoring metric, visualizing the expanded data with internal tools to realize functions as multi-dimensional abnormal traffic alert and inference success rate monitoring
+                                    <strong>[Dynamic Retry & Automatic Degradation]</strong> Abstracted the proxy layer of the service, and implemented a dynamic retry mechanism based on waiting time per request in the computing service. This mechanism reduced total hardware utilization by 20%. Based on it, implemented a heartbeat detection service to generate degradation parameters according to the response time and service accessibility and send it to upstream applications to realize an automatic delay-based degradation mechanism
                                 </li>
                                 <li>
                                     <strong>[Model Optimization & Access Support]</strong> Optimized Transformer based models (Bert, Ernie) according to hardware types (Tesla T4, Tesla P4, Kunlun K200) using TensorRT and got 50% speedup in average; supported different types of models to access Model Service; provided daily technology support and abnormality response
